@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies
+      - mvn install
+  build:
+    commands:
+      - echo Running unit tests
+      - mvn test
+
+reports:
+  SurefireReports:
+    files:
+      - target/surefire-reports/*.xml
+    base-directory: .
